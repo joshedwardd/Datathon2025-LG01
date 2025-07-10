@@ -17,49 +17,42 @@ Model: https://huggingface.co/joshedwardddd/Model_LG01
 Kode (Repositori GitHub): https://github.com/joshedwardd/Datathon2025-LG01
 
 ## Instalasi
-Untuk menjalankan proyek ini secara lokal, ikuti langkah-langkah berikut:
+Untuk menjalankan proyek ini secara lokal, ikuti langkah-langkah mudah berikut:
 
-Kloning Repositori:
-
-Bash
+1. Kloning Repositori
+Pertama, unduh kode proyek ini ke komputer Anda. Buka terminal atau Command Prompt, lalu jalankan perintah ini:
 
 git clone https://github.com/joshedwardd/Datathon2025-LG01.git
 cd Datathon2025-LG01
-Buat Lingkungan Virtual (Direkomendasikan):
-Menggunakan lingkungan virtual membantu mengisolasi dependensi proyek dari instalasi Python global Anda.
 
-Bash
+2. Buat Lingkungan Virtual (Direkomendasikan)
+Ini akan mengisolasi dependensi proyek Anda dari instalasi Python global, menghindari konflik.
 
 python -m venv venv
-Kemudian, aktifkan lingkungan virtual tersebut:
 
-Untuk Linux/macOS:
+Setelah itu, aktifkan lingkungan virtual:
 
-Bash
+-Untuk Linux/macOS:
 
 source venv/bin/activate
-Untuk Windows:
 
-Bash
+-Untuk Windows:
 
 .\venv\Scripts\activate
-Instal Dependensi:
-Setelah lingkungan virtual aktif, instal semua pustaka Python yang diperlukan:
 
-Bash
+3. Instal Dependensi
+Dengan lingkungan virtual aktif, instal semua pustaka Python yang diperlukan dari requirements.txt:
 
 pip install -r requirements.txt
-Unduh Dataset dan Model:
-Dataset dan model terlatih tersedia di Hugging Face. Anda bisa mengunduhnya secara manual atau menggunakan pustaka seperti huggingface_hub jika diperlukan skrip otomatis. Pastikan file-file ini ditempatkan di direktori data/raw/ dan models/ sesuai struktur proyek.
+
+4. Unduh Dataset dan Model
+Dataset dan model terlatih sudah tersedia di Hugging Face. Anda bisa mengunduhnya secara manual. Pastikan file-file ini ditempatkan di direktori data/raw/ (untuk dataset) dan models/ (untuk model) sesuai struktur proyek.
 
 Dataset: https://huggingface.co/datasets/joshedwardddd/Dataset_LG01
 
 Model: https://huggingface.co/joshedwardddd/Model_LG01
 
-Tips: Jika Anda memiliki skrip Python untuk mengunduh ini secara otomatis, sebutkan di sini (misalnya, python src/download_assets.py).
 
-Persiapan Lingkungan Tambahan (Opsional):
-Untuk performa terbaik model image recognition, pastikan driver GPU NVIDIA serta CUDA Toolkit dan cuDNN Anda terinstal dan terkonfigurasi dengan benar jika Anda berencana menggunakan GPU.
 
 ## Cara Menjalankan Proyek
 ...
