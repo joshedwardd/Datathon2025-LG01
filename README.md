@@ -27,18 +27,17 @@ cd Datathon2025-LG01
 
 2. Buat Lingkungan Virtual (Direkomendasikan)
 Ini akan mengisolasi dependensi proyek Anda dari instalasi Python global, menghindari konflik.
-
-python -m venv venv
+    - python -m venv venv
 
 Setelah itu, aktifkan lingkungan virtual:
 
--Untuk Linux/macOS:
+- Untuk Linux/macOS:
 
-source venv/bin/activate
+    - source venv/bin/activate
 
--Untuk Windows:
+- Untuk Windows:
 
-.\venv\Scripts\activate
+    - .\venv\Scripts\activate
 
 3. Instal Dependensi
 Dengan lingkungan virtual aktif, instal semua pustaka Python yang diperlukan dari requirements.txt:
@@ -51,15 +50,6 @@ Dataset dan model terlatih sudah tersedia di Hugging Face. Anda bisa mengunduhny
 Dataset: https://huggingface.co/datasets/joshedwardddd/Dataset_LG01
 
 Model: https://huggingface.co/joshedwardddd/Model_LG01
-
-
-
-## Cara Menjalankan Proyek
-...
-
-## Persiapan Data Umum
-...
-
 
 # Detail Notebook Utama
 Berikut adalah penjelasan lebih lanjut mengenai notebook yang memuat implementasi model kami:
@@ -91,11 +81,38 @@ File: Code_ImageBasedDetection_LG01.ipynb
 Tujuan: Metode ini menggunakan pendekatan klasifikasi citra secara langsung. Model akan menganalisis gambar PCB dan mengklasifikasikannya ke dalam enam kelas cacat yang berbeda (yaitu missing hole, mouse bite, open circuit, short, spur, spurious copper) atau sebagai PCB normal.
 
 
-## Hasil dan Analisis
+## Hasil
 
-## Kontribusi
+## 1. Deteksi Cacat PCB Berbasis Data Tabular
+Pendekatan tabular menggunakan pipeline hirarkis dengan tiga model sekuensial:
 
-## Kontak
+### 1.1 Prediksi Dini Cacat Komponen (Tahap 1)
+
+Model Terbaik: LightGBM
+
+Performa Kunci: Mencapai akurasi 94%. Model ini menunjukkan presisi yang sangat baik (98%) dan recall kuat (92%) untuk kelas "Defect", serta presisi 90% dan recall 97% untuk "Not Defect". LightGBM dipilih karena performanya yang seimbang dan efisiensi komputasi yang tinggi, dengan jumlah False Positive yang minimal.
+
+### 1.2 Prediksi Penilaian Operator (Tahap 2)
+
+Model Terbaik: LightGBM
+
+Performa Kunci: Mencapai akurasi 98%. LightGBM unggul dalam memprediksi kelas "Good" dengan presisi 98% dan recall sempurna 100%. Meskipun recall untuk kelas "Bad" (61%) sedikit lebih rendah dibandingkan XGBoost, presisi (96%) dan jumlah False Positive yang minimal (hanya 3 kasus) menunjukkan kemampuannya yang andal dalam menangani ketidakseimbangan data pada tugas ini.
+
+### 1.3 Klasifikasi Label Perbaikan (Tahap 3)
+
+Model Terbaik: CatBoost
+
+Performa Kunci: Mencapai akurasi 90%. CatBoost menunjukkan kemampuan superior dalam mengidentifikasi kelas 'False Scrap' dengan presisi 100%, meskipun recallnya (18%) masih dapat dioptimalkan. Kemampuannya untuk tidak menghasilkan False Positive pada kelas ini sangat krusial dalam konteks deteksi cacat PCB. CatBoost juga mempertahankan kinerja tinggi pada kelas 'Not Possible To Repair' dan 'Not Yet Classified' (sekitar 90%-98% presisi dan recall), menjadikannya pilihan optimal karena efektivitasnya dalam menangani fitur kategorikal dan data yang tidak seimbang.
+
+## 2. Deteksi Cacat PCB Berbasis Data Visual
+Model Terbaik: ResNet18 (Full Fine-Tuned)
+
+Performa Kunci: Model ini mencapai akurasi keseluruhan 93.54% dalam mengklasifikasikan enam jenis cacat PCB (missing_hole, mouse_bite, open_circuit, short, spur, spurious_copper) atau sebagai PCB normal.
+
+Keunggulan: ResNet18 yang di-fine-tune penuh secara signifikan melampaui arsitektur CNN kustom dan ResNet18 standar. Keunggulannya berasal dari arsitektur residual yang kokoh, pemanfaatan transfer learning dari ImageNet, dan full fine-tuning yang mendalam pada seluruh jaringan, memungkinkannya beradaptasi secara optimal dengan detail cacat PCB yang rumit.
+
+Metrik Spesifik: Model ini menunjukkan recall sempurna (100%) untuk missing_hole dan spurious_copper, serta presisi tinggi (98.8%) untuk missing_hole dan 100% untuk short. Analisis confusion matrix menunjukkan jumlah kesalahan klasifikasi yang minimal, secara drastis mengurangi False Negative dan False Positive dibandingkan model lain.
+
 
 ## Dibuat Untuk
 Proyek ini dikembangkan khusus untuk berpartisipasi dalam DATATHON 2025, sebuah kompetisi yang diselenggarakan oleh RISTEK Fasilkom Universitas Indonesia. 
