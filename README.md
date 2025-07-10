@@ -10,11 +10,11 @@ Melalui pendekatan multi-modal ini—menggabungkan data inspeksi tabular dan vis
 ## Tautan Proyek
 Anda bisa mengakses komponen utama proyek ini melalui tautan berikut:
 
-Dataset: https://huggingface.co/datasets/joshedwardddd/Dataset_LG01
+    - Dataset: https://huggingface.co/datasets/joshedwardddd/Dataset_LG01
 
-Model: https://huggingface.co/joshedwardddd/Model_LG01
+    - Model: https://huggingface.co/joshedwardddd/Model_LG01
 
-Kode (Repositori GitHub): https://github.com/joshedwardd/Datathon2025-LG01
+    - Kode (Repositori GitHub): https://github.com/joshedwardd/Datathon2025-LG01
 
 ## Instalasi
 Untuk menjalankan proyek ini secara lokal, ikuti langkah-langkah mudah berikut:
