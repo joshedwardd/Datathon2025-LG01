@@ -125,9 +125,9 @@ Model Terbaik: ResNet18 (Full Fine-Tuned)
 - Metrik Spesifik: Model ini menunjukkan recall sempurna (100%) untuk missing_hole dan spurious_copper, serta presisi tinggi (98.8%) untuk missing_hole dan 100% untuk short. Analisis confusion matrix menunjukkan jumlah kesalahan klasifikasi yang minimal, secara drastis mengurangi False Negative dan False Positive dibandingkan model lain.
 
 ## Pembuat
-**- Josh Edward Sutanto
+- Josh Edward Sutanto
 - Vincentius Jacob Gunawan
-- Rizky Fadhilah**
+- Rizky Fadhilah
 
 ## Dibuat Untuk
-**Proyek ini dikembangkan khusus untuk berpartisipasi dalam DATATHON 2025, sebuah kompetisi yang diselenggarakan oleh RISTEK Fasilkom Universitas Indonesia. **
+### Proyek ini dikembangkan khusus untuk berpartisipasi dalam DATATHON 2025, sebuah kompetisi yang diselenggarakan oleh RISTEK Fasilkom Universitas Indonesia. 
