@@ -42,14 +42,14 @@ Setelah itu, aktifkan lingkungan virtual:
 3. Instal Dependensi
 Dengan lingkungan virtual aktif, instal semua pustaka Python yang diperlukan dari requirements.txt:
 
-- pip install -r requirements.txt
+    - pip install -r requirements.txt
 
 4. Unduh Dataset dan Model
 Dataset dan model terlatih sudah tersedia di Hugging Face. Anda bisa mengunduhnya secara manual. Pastikan file-file ini ditempatkan di direktori data/raw/ (untuk dataset) dan models/ (untuk model) sesuai struktur proyek.
 
-- Dataset: https://huggingface.co/datasets/joshedwardddd/Dataset_LG01
+    - Dataset: https://huggingface.co/datasets/joshedwardddd/Dataset_LG01
 
-- Model: https://huggingface.co/joshedwardddd/Model_LG01
+    - Model: https://huggingface.co/joshedwardddd/Model_LG01
 
 # Detail Notebook Utama
 Berikut adalah penjelasan lebih lanjut mengenai notebook yang memuat implementasi model kami:
