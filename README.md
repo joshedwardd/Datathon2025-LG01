@@ -61,20 +61,35 @@ Model: https://huggingface.co/joshedwardddd/Model_LG01
 ...
 
 
-# File Proyek
-# 1. Deteksi Cacat PCB berbasis Data Tabular
+# Detail Notebook Utama
+Berikut adalah penjelasan lebih lanjut mengenai notebook yang memuat implementasi model kami:
 
-## 1.1 Prediksi Dini Cacat Komponen Berdasarkan Inspeksi SPI (Tahap 1)
-File : Code_ModelTask1_TabularBasedDetection_LG01.ipynb
+## 1. Deteksi Cacat PCB Berbasis Data Tabular (Pendekatan Hirarkis Sekuensial)
+Kami mengimplementasikan pipeline klasifikasi hirarkis dengan tiga model yang bekerja secara sekuensial untuk analisis data tabular:
 
-## 1.2 Prediksi Penilaian Operator Menggunakan Perbandingan Model (Tahap 2)
-File : Code_ModelTask2_TabularBasedDetection_LG01.ipynb
+### 1.1 Prediksi Dini Cacat Komponen Berdasarkan Inspeksi SPI (Tahap 1)
 
-## 1.3 Prediksi Klasifikasi Label Perbaikan (Tahap 3)
-File : Code_ModelTask3_TabularBasedDetection_LG01.ipynb
+File: Code_ModelTask1_TabularBasedDetection_LG01.ipynb
 
-# 2. Deteksi Cacat PCB berbasis Data Visual
-File : Code_ImageBasedDetection_LG01.ipynb
+Tujuan: Bertindak sebagai detektor awal (early detector). Model ini menganalisis data dari tahap awal inspeksi Solder Paste Inspection (SPI) untuk memprediksi probabilitas sebuah unit PCB (figure) dikategorikan sebagai cacat atau tidak oleh mesin Automated Optical Inspection (AOI) di akhir lini produksi.
+
+### 1.2 Prediksi Penilaian Operator Menggunakan Perbandingan Model (Tahap 2)
+
+File: Code_ModelTask2_TabularBasedDetection_LG01.ipynb
+
+Tujuan: Jika sebuah unit PCB ditandai cacat oleh model Tahap 1, model pada Tahap 2 ini akan memprediksi penilaian operator (apakah Good atau Bad) terhadap unit cacat tersebut, secara efektif menggantikan peran operator manusia dalam proses AOI.
+
+### 1.3 Prediksi Klasifikasi Label Perbaikan (Tahap 3)
+
+File: Code_ModelTask3_TabularBasedDetection_LG01.ipynb
+
+Tujuan: Tahap terakhir ini adalah model klasifikasi multi-kelas yang memprediksi opsi perbaikan untuk komponen yang dinilai Bad oleh operator. Model akan menentukan apakah unit tersebut masih dapat diperbaiki, sudah tidak bisa diperbaiki, atau merupakan kesalahan deteksi oleh mesin.
+
+## 2. Deteksi Cacat PCB Berbasis Data Visual
+File: Code_ImageBasedDetection_LG01.ipynb
+
+Tujuan: Metode ini menggunakan pendekatan klasifikasi citra secara langsung. Model akan menganalisis gambar PCB dan mengklasifikasikannya ke dalam enam kelas cacat yang berbeda (yaitu missing hole, mouse bite, open circuit, short, spur, spurious copper) atau sebagai PCB normal.
+
 
 ## Hasil dan Analisis
 
