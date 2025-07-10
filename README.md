@@ -1,4 +1,4 @@
-# Deteksi Cacat PCB Multi-Modal untuk Optimasi Produksi Elektronik: Integrasi Data Tabular SPI dan Pengenalan Citra Berbasis AI
+# Pendekatan Machine Learning Multi-Modal pada Deteksi Kerusakan PCB untuk Efisiensi Proses Manufaktur PCB  
 
 ## Deskripsi
 Di era Industri 4.0, kualitas dan efisiensi produksi Printed Circuit Board (PCB) merupakan faktor penentu daya saing. Proses manufaktur PCB seringkali menghadapi tantangan dalam mendeteksi cacat, yang dapat menyebabkan kerugian signifikan. Untuk mengatasi ini, proyek ini mengembangkan model Machine Learning hibrida yang mampu menganalisis dan mengklasifikasikan PCB hasil manufaktur. Model ini mengidentifikasi tiga kategori utama: layak untuk tahap selanjutnya, rusak minor namun bisa diperbaiki, dan tidak layak/tidak bisa diperbaiki.
