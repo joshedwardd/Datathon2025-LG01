@@ -50,9 +50,14 @@ Dataset dan model terlatih sudah tersedia di Hugging Face. Anda bisa mengunduhny
     - Dataset: https://huggingface.co/datasets/joshedwardddd/Dataset_LG01
 
     - Model: https://huggingface.co/joshedwardddd/Model_LG01
+  
+### **Penting: GitHub memiliki batasan ukuran file yang ditampilkan di antarmuka web dan terkadang tidak menyertakan file yang sangat besar dalam unduhan ZIP repositori. Untuk memastikan Anda memiliki semua file kode dan data yang diperlukan, sangat disarankan untuk melakukan git clone (Langkah 1) dan mengunduh dataset serta model langsung dari tautan Hugging Face (Langkah 4).**
 
 # Detail Notebook Utama
 Berikut adalah penjelasan lebih lanjut mengenai notebook yang memuat implementasi model kami:
+
+## Catatan Penting untuk Notebook Data Tabular (Tahap 1.1, 1.2, 1.3):
+**Untuk menjalankan notebook yang melibatkan data tabular (Code_ModelTask1, Code_ModelTask2, Code_ModelTask3), Anda mungkin perlu mengonfigurasi akses ke Kaggle API. Pastikan Anda memiliki file kaggle.json yang berisi kredensial Kaggle Anda di direktori yang sesuai (biasanya ~/.kaggle/ di Linux/macOS atau C:\Users\<username>\.kaggle\ di Windows) jika data diunduh langsung melalui Kaggle API di dalam notebook.**
 
 ## 1. Deteksi Cacat PCB Berbasis Data Tabular (Pendekatan Hirarkis Sekuensial)
 Kami mengimplementasikan pipeline klasifikasi hirarkis dengan tiga model yang bekerja secara sekuensial untuk analisis data tabular:
