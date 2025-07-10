@@ -1,7 +1,7 @@
 # Pendekatan Machine Learning Multi-Modal pada Deteksi Kerusakan PCB untuk Efisiensi Proses Manufaktur PCB
 
 ## Deskripsi
-Di era Industri 4.0, kualitas dan efisiensi produksi Printed Circuit Board (PCB) merupakan faktor penentu daya saing. Proses manufaktur PCB seringkali menghadapi tantangan dalam mendeteksi cacat, yang dapat menyebabkan kerugian signifikan. Untuk mengatasi ini, proyek ini mengembangkan model Machine Learning hibrida yang mampu menganalisis dan mengklasifikasikan PCB hasil manufaktur. Model ini mengidentifikasi tiga kategori utama: layak untuk tahap selanjutnya, rusak minor namun bisa diperbaiki, dan tidak layak/tidak bisa diperbaiki.
+Di era Industri 4.0, kualitas dan efisiensi produksi Printed Circuit Board (PCB) merupakan faktor penentu daya saing. Proses manufaktur PCB seringkali menghadapi tantangan dalam mendeteksi cacat, yang dapat menyebabkan kerugian signifikan. Untuk mengatasi ini, proyek ini mengembangkan model Machine Learning yang mampu menganalisis dan mengklasifikasikan PCB hasil manufaktur. Model ini mengidentifikasi tiga kategori utama: layak untuk tahap selanjutnya, rusak minor namun bisa diperbaiki, dan tidak layak/tidak bisa diperbaiki.
 
 Tujuan utamanya adalah meningkatkan efisiensi proses manufaktur PCB dan mendukung Industri 4.0 dengan memberikan insight operasional yang memungkinkan pengambilan keputusan bisnis yang cepat dan tepat. Kami menggunakan dua sumber data real-world: data tabular dari organisasi PHME bekerja sama dengan Bitron Spa, serta data citra dari dataset "PCB Defect" Kaggle untuk pengembangan model berbasis image recognition.
 
