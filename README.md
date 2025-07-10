@@ -22,8 +22,8 @@ Untuk menjalankan proyek ini secara lokal, ikuti langkah-langkah mudah berikut:
 1. Kloning Repositori
 Pertama, unduh kode proyek ini ke komputer Anda. Buka terminal atau Command Prompt, lalu jalankan perintah ini:
 
-git clone https://github.com/joshedwardd/Datathon2025-LG01.git
-cd Datathon2025-LG01
+    - git clone https://github.com/joshedwardd/Datathon2025-LG01.git
+    - cd Datathon2025-LG01
 
 2. Buat Lingkungan Virtual (Direkomendasikan)
 Ini akan mengisolasi dependensi proyek Anda dari instalasi Python global, menghindari konflik.
