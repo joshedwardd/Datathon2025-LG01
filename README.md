@@ -106,9 +106,9 @@ Pendekatan tabular menggunakan pipeline hirarkis dengan tiga model sekuensial:
 
 ### 1.3 Klasifikasi Label Perbaikan (Tahap 3)
 
-- Model Terbaik: CatBoost
+- Model Terbaik: LightGBM
 
-- Performa Kunci: Mencapai akurasi 90%. CatBoost menunjukkan kemampuan superior dalam mengidentifikasi kelas 'False Scrap' dengan presisi 100%, meskipun recallnya (18%) masih dapat dioptimalkan. Kemampuannya untuk tidak menghasilkan False Positive pada kelas ini sangat krusial dalam konteks deteksi cacat PCB. CatBoost juga mempertahankan kinerja tinggi pada kelas 'Not Possible To Repair' dan 'Not Yet Classified' (sekitar 90%-98% presisi dan recall), menjadikannya pilihan optimal karena efektivitasnya dalam menangani fitur kategorikal dan data yang tidak seimbang.
+Alasan Pemilihan: Terpilih karena keseimbangan performa terbaik dan efisiensi operasional. LightGBM menunjukkan F1-score macro avg tertinggi (0.76) dan F1-score terbaik (0.42) untuk kelas krusial 'FalseScrap', meskipun akurasi keseluruhannya (86%) tidak paling tinggi. Kecepatan training yang unggul juga mendukung implementasi praktis.
 
 ## 2. Deteksi Cacat PCB Berbasis Data Visual
 Model Terbaik: ResNet18 (Full Fine-Tuned)
